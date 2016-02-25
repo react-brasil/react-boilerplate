@@ -8,6 +8,7 @@ Um boilerplate completo usando React + Redux, para você trabalhar em seus proje
  - [x] Redux
  - [x] Webpack
  - [x] Babel
+ - [x] LESS
  - [ ] Relay
  - [ ] Immutable.js
  - [ ] Redux Simple Router
