@@ -6,6 +6,8 @@ import MainContent from '../../components/MainContent'
 
 import * as Actions from '../../actions/actions'
 
+import style from './style.less'
+
 class App extends Component {
 	render() {
 		const {state, actions, children } = this.props
