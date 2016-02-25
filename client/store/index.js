@@ -1,19 +1,13 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import rootReducer from '../reducers'
-// import { syncHistory } from 'react-router-redux'
-import { browserHistory } from 'react-router'
-
-const finalCreateStore = compose(
-  // Required! Enable Redux DevTools with the monitors you chose
-  // DevTools.instrument()
-)(createStore);
-
-// const createStoreWithMiddleware = applyMiddleware(
-//     syncHistory(browserHistory)
-// )(finalCreateStore)
+import { syncHistory } from 'react-router-redux'
+import browserHistory from 'react-router'
 
 export default function configure(initialState) {
-  const store = finalCreateStore(rootReducer, initialState)
+  const store = createStore(
+    rootReducer, 
+    initialState
+  )
 
   if (module.hot) {
     module.hot.accept('../reducers', () => {
